@@ -111,19 +111,7 @@ def update_data(person_id):
 @app.route('/delete_data/<person_id>', methods=["DELETE"])
 def del_data(person_id):
     per_id = person_id
-
-    req_data = request.get_json()
-    if "first_name" not in req_data:
-        return "first name is not available"
-
-    if "last_name" not in req_data:
-        return "last name is missing"
-
-    print("REQ DATA IS: ", req_data)
     
-    first_name = req_data["first_name"]
-    last_name = req_data["last_name"]
-
     cursor = conn.cursor()
     delete_query = """
     DELETE FROM [mydb].[dbo].[Table_1]
