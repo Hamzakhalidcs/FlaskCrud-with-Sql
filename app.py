@@ -123,7 +123,6 @@ def del_data(person_id):
     
     first_name = req_data["first_name"]
     last_name = req_data["last_name"]
-    # DELETE FROM Customers WHERE CustomerName='Alfreds Futterkiste';
 
     cursor = conn.cursor()
     delete_query = """
